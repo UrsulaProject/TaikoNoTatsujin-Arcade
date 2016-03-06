@@ -1,0 +1,826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C01295251AAF66EC00348656 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C01295231AAF66DF00348656 /* libsubstrate.dylib */; };
+		C01295271AAF683A00348656 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01295261AAF683A00348656 /* Security.framework */; };
+		C02DFA661AAF446500C8FB3F /* FileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C02DFA641AAF446500C8FB3F /* FileHelper.h */; };
+		C02DFA671AAF446500C8FB3F /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C02DFA651AAF446500C8FB3F /* FileHelper.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C02DFA6A1AAF51E600C8FB3F /* Md5.h in Headers */ = {isa = PBXBuildFile; fileRef = C02DFA681AAF51E600C8FB3F /* Md5.h */; };
+		C02DFA6B1AAF51E600C8FB3F /* Md5.m in Sources */ = {isa = PBXBuildFile; fileRef = C02DFA691AAF51E600C8FB3F /* Md5.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C02DFA6E1AAF547E00C8FB3F /* RNEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C02DFA6C1AAF547E00C8FB3F /* RNEncryptor.h */; };
+		C02DFA6F1AAF547E00C8FB3F /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C02DFA6D1AAF547E00C8FB3F /* RNEncryptor.m */; };
+		C06B94991AACCCE200CD6D37 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B948A1AACCCE200CD6D37 /* Base64.h */; };
+		C06B949A1AACCCE200CD6D37 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B948B1AACCCE200CD6D37 /* Base64.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C06B949B1AACCCE200CD6D37 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B948C1AACCCE200CD6D37 /* GTMBase64.h */; };
+		C06B949C1AACCCE200CD6D37 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B948D1AACCCE200CD6D37 /* GTMBase64.m */; };
+		C06B949D1AACCCE200CD6D37 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B948E1AACCCE200CD6D37 /* GTMDefines.h */; };
+		C06B949E1AACCCE200CD6D37 /* RNCryptor-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C06B948F1AACCCE200CD6D37 /* RNCryptor-Prefix.pch */; };
+		C06B949F1AACCCE200CD6D37 /* RNCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94901AACCCE200CD6D37 /* RNCryptor.h */; };
+		C06B94A01AACCCE200CD6D37 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B94911AACCCE200CD6D37 /* RNCryptor.m */; };
+		C06B94A11AACCCE200CD6D37 /* RNCryptor+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94921AACCCE200CD6D37 /* RNCryptor+Private.h */; };
+		C06B94A21AACCCE200CD6D37 /* RNCryptorEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94931AACCCE200CD6D37 /* RNCryptorEngine.h */; };
+		C06B94A31AACCCE200CD6D37 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B94941AACCCE200CD6D37 /* RNCryptorEngine.m */; };
+		C06B94A41AACCCE200CD6D37 /* RNDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94951AACCCE200CD6D37 /* RNDecryptor.h */; };
+		C06B94A51AACCCE200CD6D37 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B94961AACCCE200CD6D37 /* RNDecryptor.m */; };
+		C06B94A61AACCCE200CD6D37 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94971AACCCE200CD6D37 /* STHTTPRequest.h */; };
+		C06B94A71AACCCE200CD6D37 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B94981AACCCE200CD6D37 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C06B94AE1AACCD2800CD6D37 /* DesHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C06B94A81AACCD2800CD6D37 /* DesHelper.h */; };
+		C06B94AF1AACCD2800CD6D37 /* DesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B94A91AACCD2800CD6D37 /* DesHelper.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C085CC4E1AB20A940012F5D1 /* TaikoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C085CC4A1AB20A930012F5D1 /* TaikoController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C085CC501AB20A940012F5D1 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C085CC4C1AB20A940012F5D1 /* ServerController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C085CC511AB20A940012F5D1 /* ServerController.h in Headers */ = {isa = PBXBuildFile; fileRef = C085CC4D1AB20A940012F5D1 /* ServerController.h */; };
+		FA2B25971B4D2B4600B940DA /* ISceneManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2B25951B4D2B4600B940DA /* ISceneManager.h */; };
+		FA2B25981B4D2B4600B940DA /* ISceneMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2B25961B4D2B4600B940DA /* ISceneMenu.h */; };
+		FA5570C41A6AD4C8006EA18E /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5570C31A6AD4C8006EA18E /* IO.h */; };
+		FA5570C61A6AD4E0006EA18E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5570C51A6AD4E0006EA18E /* UIKit.framework */; };
+		FA8ED03D1B5C0DB800FDF9FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8ED03C1B5C0DB800FDF9FD /* main.m */; };
+		FAA9EDE31A6ACF0A008DE36C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA9EDE21A6ACF0A008DE36C /* Foundation.framework */; };
+		FAA9EDEE1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAA9EDED1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.mm */; };
+		FADA75241AB57404006D0D17 /* ISongInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = FADA75231AB57404006D0D17 /* ISongInfo.h */; };
+		FADA75261AB5740E006D0D17 /* TaikoEquipment.h in Headers */ = {isa = PBXBuildFile; fileRef = FADA75251AB5740E006D0D17 /* TaikoEquipment.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C01295211AAF66DF00348656 /* libactionmenu.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libactionmenu.dylib; sourceTree = "<group>"; };
+		C01295221AAF66DF00348656 /* libactivator.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libactivator.dylib; sourceTree = "<group>"; };
+		C01295231AAF66DF00348656 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsubstrate.dylib; sourceTree = "<group>"; };
+		C01295241AAF66DF00348656 /* libsubstrate2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsubstrate2.dylib; sourceTree = "<group>"; };
+		C01295261AAF683A00348656 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C02DFA641AAF446500C8FB3F /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
+		C02DFA651AAF446500C8FB3F /* FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelper.m; sourceTree = "<group>"; };
+		C02DFA681AAF51E600C8FB3F /* Md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Md5.h; path = Librarys/Md5.h; sourceTree = "<group>"; };
+		C02DFA691AAF51E600C8FB3F /* Md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Md5.m; path = Librarys/Md5.m; sourceTree = "<group>"; };
+		C02DFA6C1AAF547E00C8FB3F /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNEncryptor.h; path = Librarys/RNEncryptor.h; sourceTree = "<group>"; };
+		C02DFA6D1AAF547E00C8FB3F /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNEncryptor.m; path = Librarys/RNEncryptor.m; sourceTree = "<group>"; };
+		C03F31361AAF65BC00621AD1 /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
+		C06B948A1AACCCE200CD6D37 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = Librarys/Base64.h; sourceTree = "<group>"; };
+		C06B948B1AACCCE200CD6D37 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = Librarys/Base64.m; sourceTree = "<group>"; };
+		C06B948C1AACCCE200CD6D37 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = Librarys/GTMBase64.h; sourceTree = "<group>"; };
+		C06B948D1AACCCE200CD6D37 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = Librarys/GTMBase64.m; sourceTree = "<group>"; };
+		C06B948E1AACCCE200CD6D37 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = Librarys/GTMDefines.h; sourceTree = "<group>"; };
+		C06B948F1AACCCE200CD6D37 /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNCryptor-Prefix.pch"; path = "Librarys/RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		C06B94901AACCCE200CD6D37 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptor.h; path = Librarys/RNCryptor.h; sourceTree = "<group>"; };
+		C06B94911AACCCE200CD6D37 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptor.m; path = Librarys/RNCryptor.m; sourceTree = "<group>"; };
+		C06B94921AACCCE200CD6D37 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNCryptor+Private.h"; path = "Librarys/RNCryptor+Private.h"; sourceTree = "<group>"; };
+		C06B94931AACCCE200CD6D37 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptorEngine.h; path = Librarys/RNCryptorEngine.h; sourceTree = "<group>"; };
+		C06B94941AACCCE200CD6D37 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptorEngine.m; path = Librarys/RNCryptorEngine.m; sourceTree = "<group>"; };
+		C06B94951AACCCE200CD6D37 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNDecryptor.h; path = Librarys/RNDecryptor.h; sourceTree = "<group>"; };
+		C06B94961AACCCE200CD6D37 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNDecryptor.m; path = Librarys/RNDecryptor.m; sourceTree = "<group>"; };
+		C06B94971AACCCE200CD6D37 /* STHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STHTTPRequest.h; path = Librarys/STHTTPRequest.h; sourceTree = "<group>"; };
+		C06B94981AACCCE200CD6D37 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STHTTPRequest.m; path = Librarys/STHTTPRequest.m; sourceTree = "<group>"; };
+		C06B94A81AACCD2800CD6D37 /* DesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesHelper.h; sourceTree = "<group>"; };
+		C06B94A91AACCD2800CD6D37 /* DesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesHelper.m; sourceTree = "<group>"; };
+		C085CC4A1AB20A930012F5D1 /* TaikoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaikoController.m; sourceTree = "<group>"; };
+		C085CC4B1AB20A940012F5D1 /* TaikoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaikoController.h; sourceTree = "<group>"; };
+		C085CC4C1AB20A940012F5D1 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
+		C085CC4D1AB20A940012F5D1 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
+		FA2B25951B4D2B4600B940DA /* ISceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISceneManager.h; sourceTree = "<group>"; };
+		FA2B25961B4D2B4600B940DA /* ISceneMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISceneMenu.h; sourceTree = "<group>"; };
+		FA5570C31A6AD4C8006EA18E /* IO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		FA5570C51A6AD4E0006EA18E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA5570C71A6AD59B006EA18E /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsubstrate.dylib; sourceTree = "<group>"; };
+		FA5570CA1A6AE01E006EA18E /* BoxInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxInfo.h; sourceTree = "<group>"; };
+		FA5570CB1A6AE01E006EA18E /* CAAction-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAAction-Protocol.h"; sourceTree = "<group>"; };
+		FA5570CC1A6AE01E006EA18E /* CDStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		FA5570CD1A6AE01E006EA18E /* CollaboInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollaboInfo.h; sourceTree = "<group>"; };
+		FA5570CE1A6AE01E006EA18E /* GameOptionIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOptionIcons.h; sourceTree = "<group>"; };
+		FA5570CF1A6AE01E006EA18E /* GKSessionDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKSessionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA5570D01A6AE01E006EA18E /* GKTaikoBattle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKTaikoBattle.h; sourceTree = "<group>"; };
+		FA5570D11A6AE01E006EA18E /* GKTaikoBattleDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GKTaikoBattleDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA5570D21A6AE01E006EA18E /* HowtoScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HowtoScrollView.h; sourceTree = "<group>"; };
+		FA5570D41A6AE01E006EA18E /* IMemberInfoForVSGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMemberInfoForVSGame.h; sourceTree = "<group>"; };
+		FA5570D51A6AE01E006EA18E /* IMemberInfoForVSResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMemberInfoForVSResult.h; sourceTree = "<group>"; };
+		FA5570D61A6AE01E006EA18E /* IMemberInfoForVSSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMemberInfoForVSSettings.h; sourceTree = "<group>"; };
+		FA5570D71A6AE01E006EA18E /* IRoomInfoForVSSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRoomInfoForVSSettings.h; sourceTree = "<group>"; };
+		FA5570D81A6AE01E006EA18E /* ISceneAd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneAd.h; sourceTree = "<group>"; };
+		FA5570D91A6AE01E006EA18E /* ISceneBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneBase.h; sourceTree = "<group>"; };
+		FA5570DA1A6AE01E006EA18E /* ISceneBonuspoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneBonuspoint.h; sourceTree = "<group>"; };
+		FA5570DB1A6AE01E006EA18E /* ISceneBranchType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneBranchType.h; sourceTree = "<group>"; };
+		FA5570DC1A6AE01E006EA18E /* ISceneDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneDialog.h; sourceTree = "<group>"; };
+		FA5570DD1A6AE01E006EA18E /* ISceneExerciseBonusDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneExerciseBonusDialog.h; sourceTree = "<group>"; };
+		FA5570DE1A6AE01E006EA18E /* ISceneFukubiki.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneFukubiki.h; sourceTree = "<group>"; };
+		FA5570DF1A6AE01E006EA18E /* ISceneFukubikiResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneFukubikiResult.h; sourceTree = "<group>"; };
+		FA5570E01A6AE01E006EA18E /* ISceneFullCombo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneFullCombo.h; sourceTree = "<group>"; };
+		FA5570E11A6AE01E006EA18E /* ISceneGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneGame.h; sourceTree = "<group>"; };
+		FA5570E21A6AE01E006EA18E /* ISceneGottenPrize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneGottenPrize.h; sourceTree = "<group>"; };
+		FA5570E31A6AE01E006EA18E /* ISceneHowTo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneHowTo.h; sourceTree = "<group>"; };
+		FA5570E41A6AE01E006EA18E /* ISceneLinkage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneLinkage.h; sourceTree = "<group>"; };
+		FA5570E51A6AE01E006EA18E /* ISceneLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneLoad.h; sourceTree = "<group>"; };
+		FA5570E61A6AE01E006EA18E /* ISceneLoginBonusDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneLoginBonusDialog.h; sourceTree = "<group>"; };
+		FA5570E71A6AE01E006EA18E /* ISceneLogo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneLogo.h; sourceTree = "<group>"; };
+		FA5570E81A6AE01E006EA18E /* ISceneManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneManager.h; sourceTree = "<group>"; };
+		FA5570E91A6AE01E006EA18E /* ISceneManagerLinkage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneManagerLinkage.h; sourceTree = "<group>"; };
+		FA5570EA1A6AE01E006EA18E /* ISceneManagerLinkageAlertViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneManagerLinkageAlertViewDelegate.h; sourceTree = "<group>"; };
+		FA5570EB1A6AE01E006EA18E /* ISceneManagerTaikoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneManagerTaikoController.h; sourceTree = "<group>"; };
+		FA5570EC1A6AE01E006EA18E /* ISceneManagerVDrums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneManagerVDrums.h; sourceTree = "<group>"; };
+		FA5570ED1A6AE01E006EA18E /* ISceneMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneMenu.h; sourceTree = "<group>"; };
+		FA5570EE1A6AE01E006EA18E /* ISceneNameEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneNameEntry.h; sourceTree = "<group>"; };
+		FA5570EF1A6AE01E006EA18E /* ISceneNamePlate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneNamePlate.h; sourceTree = "<group>"; };
+		FA5570F01A6AE01E006EA18E /* ISceneOptionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneOptionButton.h; sourceTree = "<group>"; };
+		FA5570F11A6AE01E006EA18E /* ISceneOptionSelectDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneOptionSelectDialog.h; sourceTree = "<group>"; };
+		FA5570F21A6AE01E006EA18E /* ISceneOtanoshimiDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneOtanoshimiDialog.h; sourceTree = "<group>"; };
+		FA5570F31A6AE01E006EA18E /* IScenePlayBonusDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IScenePlayBonusDialog.h; sourceTree = "<group>"; };
+		FA5570F41A6AE01E006EA18E /* IScenePrizeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IScenePrizeList.h; sourceTree = "<group>"; };
+		FA5570F51A6AE01E006EA18E /* ISceneRanking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneRanking.h; sourceTree = "<group>"; };
+		FA5570F61A6AE01E006EA18E /* ISceneResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneResult.h; sourceTree = "<group>"; };
+		FA5570F71A6AE01E006EA18E /* ISceneScoreDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneScoreDialog.h; sourceTree = "<group>"; };
+		FA5570F81A6AE01E006EA18E /* ISceneScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneScrollView.h; sourceTree = "<group>"; };
+		FA5570F91A6AE01E006EA18E /* ISceneSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneSettings.h; sourceTree = "<group>"; };
+		FA5570FA1A6AE01E006EA18E /* ISceneSongSelect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneSongSelect.h; sourceTree = "<group>"; };
+		FA5570FB1A6AE01E006EA18E /* ISceneSortSelectDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneSortSelectDialog.h; sourceTree = "<group>"; };
+		FA5570FC1A6AE01E006EA18E /* ISceneStartBonusDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneStartBonusDialog.h; sourceTree = "<group>"; };
+		FA5570FD1A6AE01E006EA18E /* ISceneStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneStore.h; sourceTree = "<group>"; };
+		FA5570FE1A6AE01E006EA18E /* ISceneTaikoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneTaikoController.h; sourceTree = "<group>"; };
+		FA5570FF1A6AE01E006EA18E /* ISceneTitle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneTitle.h; sourceTree = "<group>"; };
+		FA5571001A6AE01E006EA18E /* ISceneUltra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneUltra.h; sourceTree = "<group>"; };
+		FA5571011A6AE01E006EA18E /* ISceneVDrumsDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneVDrumsDialog.h; sourceTree = "<group>"; };
+		FA5571021A6AE01E006EA18E /* ISceneVDrumsSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneVDrumsSettings.h; sourceTree = "<group>"; };
+		FA5571031A6AE01E006EA18E /* ISceneVSGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneVSGame.h; sourceTree = "<group>"; };
+		FA5571041A6AE01E006EA18E /* ISceneVSResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneVSResult.h; sourceTree = "<group>"; };
+		FA5571051A6AE01E006EA18E /* ISceneVSSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISceneVSSettings.h; sourceTree = "<group>"; };
+		FA5571061A6AE01E006EA18E /* ISongInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISongInfo.h; sourceTree = "<group>"; };
+		FA5571071A6AE01E006EA18E /* IStorePackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IStorePackage.h; sourceTree = "<group>"; };
+		FA5571081A6AE01E006EA18E /* IStoreSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IStoreSong.h; sourceTree = "<group>"; };
+		FA5571091A6AE01E006EA18E /* LicenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseViewController.h; sourceTree = "<group>"; };
+		FA55710A1A6AE01E006EA18E /* LinkageProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkageProduct.h; sourceTree = "<group>"; };
+		FA55710B1A6AE01E006EA18E /* LumenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LumenManager.h; sourceTree = "<group>"; };
+		FA55710C1A6AE01E006EA18E /* MidiInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidiInput.h; sourceTree = "<group>"; };
+		FA55710D1A6AE01E006EA18E /* MidiInputDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MidiInputDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA55710E1A6AE01E006EA18E /* MidiInputSourceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MidiInputSourceInfo.h; sourceTree = "<group>"; };
+		FA55710F1A6AE01E006EA18E /* PlayerUserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerUserData.h; sourceTree = "<group>"; };
+		FA5571101A6AE01E006EA18E /* RankingBonusInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingBonusInfo.h; sourceTree = "<group>"; };
+		FA5571111A6AE01E006EA18E /* ResultPointsAndTransitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPointsAndTransitions.h; sourceTree = "<group>"; };
+		FA5571121A6AE01E006EA18E /* SceneDialogDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SceneDialogDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA5571131A6AE01E006EA18E /* SongCoursePlate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongCoursePlate.h; sourceTree = "<group>"; };
+		FA5571141A6AE01E006EA18E /* TaikoAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoAction.h; sourceTree = "<group>"; };
+		FA5571151A6AE01E006EA18E /* TaikoAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoAlertView.h; sourceTree = "<group>"; };
+		FA5571161A6AE01E006EA18E /* TaikoAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoAudioPlayer.h; sourceTree = "<group>"; };
+		FA5571171A6AE01E006EA18E /* TaikoButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoButton.h; sourceTree = "<group>"; };
+		FA5571181A6AE01E006EA18E /* TaikoButtonDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaikoButtonDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA5571191A6AE01E006EA18E /* TaikoCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoCache.h; sourceTree = "<group>"; };
+		FA55711A1A6AE01E006EA18E /* TaikoCacheEntry-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaikoCacheEntry-Protocol.h"; sourceTree = "<group>"; };
+		FA55711B1A6AE01E006EA18E /* TaikoCacheOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoCacheOperation.h; sourceTree = "<group>"; };
+		FA55711C1A6AE01E006EA18E /* TaikoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoCoverView.h; sourceTree = "<group>"; };
+		FA55711D1A6AE01E006EA18E /* TaikoDataInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoDataInputStream.h; sourceTree = "<group>"; };
+		FA55711E1A6AE01E006EA18E /* TaikoEquipment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipment.h; sourceTree = "<group>"; };
+		FA55711F1A6AE01E006EA18E /* TaikoEquipmentCostume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipmentCostume.h; sourceTree = "<group>"; };
+		FA5571201A6AE01E006EA18E /* TaikoEquipmentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipmentManager.h; sourceTree = "<group>"; };
+		FA5571211A6AE01E006EA18E /* TaikoEquipmentTaiko.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipmentTaiko.h; sourceTree = "<group>"; };
+		FA5571221A6AE01E006EA18E /* TaikoEquipmentTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipmentTheme.h; sourceTree = "<group>"; };
+		FA5571231A6AE01E006EA18E /* TaikoEquipmentTone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoEquipmentTone.h; sourceTree = "<group>"; };
+		FA5571241A6AE01E006EA18E /* TaikoFileInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoFileInputStream.h; sourceTree = "<group>"; };
+		FA5571251A6AE01E006EA18E /* TaikoGroupAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoGroupAction.h; sourceTree = "<group>"; };
+		FA5571261A6AE01E006EA18E /* TaikoInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoInputStream.h; sourceTree = "<group>"; };
+		FA5571271A6AE01E006EA18E /* TaikoKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoKeychain.h; sourceTree = "<group>"; };
+		FA5571281A6AE01E006EA18E /* TaikoLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoLabel.h; sourceTree = "<group>"; };
+		FA5571291A6AE01E006EA18E /* TaikoLoginBonusItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoLoginBonusItem.h; sourceTree = "<group>"; };
+		FA55712A1A6AE01E006EA18E /* TaikoNumberLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoNumberLabel.h; sourceTree = "<group>"; };
+		FA55712B1A6AE01E006EA18E /* TaikoPackageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoPackageInfo.h; sourceTree = "<group>"; };
+		FA55712C1A6AE01E006EA18E /* TaikoPrize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoPrize.h; sourceTree = "<group>"; };
+		FA55712D1A6AE01E006EA18E /* TaikoPrizeImageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoPrizeImageInfo.h; sourceTree = "<group>"; };
+		FA55712E1A6AE01E006EA18E /* TaikoPrizeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoPrizeManager.h; sourceTree = "<group>"; };
+		FA55712F1A6AE01E006EA18E /* TaikoProgressIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoProgressIndicator.h; sourceTree = "<group>"; };
+		FA5571301A6AE01E006EA18E /* TaikoRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoRenderer.h; sourceTree = "<group>"; };
+		FA5571311A6AE01E006EA18E /* TaikoRepeatAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoRepeatAction.h; sourceTree = "<group>"; };
+		FA5571321A6AE01E006EA18E /* TaikoRestore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoRestore.h; sourceTree = "<group>"; };
+		FA5571331A6AE01E006EA18E /* TaikoSceneNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoSceneNode.h; sourceTree = "<group>"; };
+		FA5571341A6AE01E006EA18E /* TaikoSECache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoSECache.h; sourceTree = "<group>"; };
+		FA5571351A6AE01E006EA18E /* TaikoSECacheEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoSECacheEntry.h; sourceTree = "<group>"; };
+		FA5571361A6AE01E006EA18E /* TaikoSequenceAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoSequenceAction.h; sourceTree = "<group>"; };
+		FA5571371A6AE01E006EA18E /* TaikoTextureCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoTextureCache.h; sourceTree = "<group>"; };
+		FA5571381A6AE01E006EA18E /* TaikoTextureCacheEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoTextureCacheEntry.h; sourceTree = "<group>"; };
+		FA5571391A6AE01E006EA18E /* TaikoUpdateChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoUpdateChecker.h; sourceTree = "<group>"; };
+		FA55713A1A6AE01E006EA18E /* TaikoUpdateCheckerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaikoUpdateCheckerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA55713B1A6AE01E006EA18E /* TaikoUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoUserDefaults.h; sourceTree = "<group>"; };
+		FA55713C1A6AE01E006EA18E /* TaikoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoViewController.h; sourceTree = "<group>"; };
+		FA55713D1A6AE01E006EA18E /* TaikoWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoWindow.h; sourceTree = "<group>"; };
+		FA55713E1A6AE01E006EA18E /* TaikoWindowDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaikoWindowDelegate-Protocol.h"; sourceTree = "<group>"; };
+		FA55713F1A6AE01E006EA18E /* TaikoWindowFadeInFadeOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoWindowFadeInFadeOut.h; sourceTree = "<group>"; };
+		FA5571401A6AE01E006EA18E /* TaikoWindowOpenClose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoWindowOpenClose.h; sourceTree = "<group>"; };
+		FA5571411A6AE01E006EA18E /* TaikoWindowZoomInFadeOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaikoWindowZoomInFadeOut.h; sourceTree = "<group>"; };
+		FA8ED03C1B5C0DB800FDF9FD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAA9EDDF1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = TaikoNoTatsujinPlus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA9EDE21A6ACF0A008DE36C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAA9EDE71A6ACF0A008DE36C /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		FAA9EDE81A6ACF0A008DE36C /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		FAA9EDEA1A6ACF0A008DE36C /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		FAA9EDEB1A6ACF0A008DE36C /* TaikoNoTatsujinPlus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaikoNoTatsujinPlus-Prefix.pch"; sourceTree = "<group>"; };
+		FAA9EDEC1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TaikoNoTatsujinPlus.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		FAA9EDED1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TaikoNoTatsujinPlus.mm; sourceTree = "<group>"; };
+		FAA9EDF21A6ACF0A008DE36C /* TaikoNoTatsujinPlus.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = TaikoNoTatsujinPlus.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/TaikoNoTatsujinPlus.plist; sourceTree = "<group>"; };
+		FACD71581A6AE47600A59C80 /* checksum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checksum.c; sourceTree = "<group>"; };
+		FACD71591A6AE47600A59C80 /* Demo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
+		FAD9D9881B07DA1100A77E68 /* Obfuscating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Obfuscating.h; sourceTree = "<group>"; };
+		FADA75231AB57404006D0D17 /* ISongInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISongInfo.h; path = TaikoHeaders/ISongInfo.h; sourceTree = "<group>"; };
+		FADA75251AB5740E006D0D17 /* TaikoEquipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaikoEquipment.h; path = TaikoHeaders/TaikoEquipment.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA9EDDB1A6ACF0A008DE36C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C01295271AAF683A00348656 /* Security.framework in Frameworks */,
+				C01295251AAF66EC00348656 /* libsubstrate.dylib in Frameworks */,
+				FA5570C61A6AD4E0006EA18E /* UIKit.framework in Frameworks */,
+				FAA9EDE31A6ACF0A008DE36C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C01295201AAF66DF00348656 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C01295211AAF66DF00348656 /* libactionmenu.dylib */,
+				C01295221AAF66DF00348656 /* libactivator.dylib */,
+				C01295231AAF66DF00348656 /* libsubstrate.dylib */,
+				C01295241AAF66DF00348656 /* libsubstrate2.dylib */,
+			);
+			name = lib;
+			path = ../../../../../opt/iOSOpenDev/lib;
+			sourceTree = "<group>";
+		};
+		C06B94891AACCC8200CD6D37 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C02DFA681AAF51E600C8FB3F /* Md5.h */,
+				C02DFA691AAF51E600C8FB3F /* Md5.m */,
+				C06B948A1AACCCE200CD6D37 /* Base64.h */,
+				C06B948B1AACCCE200CD6D37 /* Base64.m */,
+				C06B948C1AACCCE200CD6D37 /* GTMBase64.h */,
+				C06B948D1AACCCE200CD6D37 /* GTMBase64.m */,
+				C06B948E1AACCCE200CD6D37 /* GTMDefines.h */,
+				C06B948F1AACCCE200CD6D37 /* RNCryptor-Prefix.pch */,
+				C06B94901AACCCE200CD6D37 /* RNCryptor.h */,
+				C06B94911AACCCE200CD6D37 /* RNCryptor.m */,
+				C06B94921AACCCE200CD6D37 /* RNCryptor+Private.h */,
+				C06B94931AACCCE200CD6D37 /* RNCryptorEngine.h */,
+				C06B94941AACCCE200CD6D37 /* RNCryptorEngine.m */,
+				C06B94951AACCCE200CD6D37 /* RNDecryptor.h */,
+				C06B94961AACCCE200CD6D37 /* RNDecryptor.m */,
+				C02DFA6C1AAF547E00C8FB3F /* RNEncryptor.h */,
+				C02DFA6D1AAF547E00C8FB3F /* RNEncryptor.m */,
+				C06B94971AACCCE200CD6D37 /* STHTTPRequest.h */,
+				C06B94981AACCCE200CD6D37 /* STHTTPRequest.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		FA0D3E541A6AD2D30082CA8E /* RelatedHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				FA2B25951B4D2B4600B940DA /* ISceneManager.h */,
+				FA2B25961B4D2B4600B940DA /* ISceneMenu.h */,
+			);
+			name = RelatedHeaders;
+			sourceTree = "<group>";
+		};
+		FA5570C91A6AE01E006EA18E /* OtherTaikoHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				FA5570CA1A6AE01E006EA18E /* BoxInfo.h */,
+				FA5570CB1A6AE01E006EA18E /* CAAction-Protocol.h */,
+				FA5570CC1A6AE01E006EA18E /* CDStructures.h */,
+				FA5570CD1A6AE01E006EA18E /* CollaboInfo.h */,
+				FA5570CE1A6AE01E006EA18E /* GameOptionIcons.h */,
+				FA5570CF1A6AE01E006EA18E /* GKSessionDelegate-Protocol.h */,
+				FA5570D01A6AE01E006EA18E /* GKTaikoBattle.h */,
+				FA5570D11A6AE01E006EA18E /* GKTaikoBattleDelegate-Protocol.h */,
+				FA5570D21A6AE01E006EA18E /* HowtoScrollView.h */,
+				FA5570D41A6AE01E006EA18E /* IMemberInfoForVSGame.h */,
+				FA5570D51A6AE01E006EA18E /* IMemberInfoForVSResult.h */,
+				FA5570D61A6AE01E006EA18E /* IMemberInfoForVSSettings.h */,
+				FA5570D71A6AE01E006EA18E /* IRoomInfoForVSSettings.h */,
+				FA5570D81A6AE01E006EA18E /* ISceneAd.h */,
+				FA5570D91A6AE01E006EA18E /* ISceneBase.h */,
+				FA5570DA1A6AE01E006EA18E /* ISceneBonuspoint.h */,
+				FA5570DB1A6AE01E006EA18E /* ISceneBranchType.h */,
+				FA5570DC1A6AE01E006EA18E /* ISceneDialog.h */,
+				FA5570DD1A6AE01E006EA18E /* ISceneExerciseBonusDialog.h */,
+				FA5570DE1A6AE01E006EA18E /* ISceneFukubiki.h */,
+				FA5570DF1A6AE01E006EA18E /* ISceneFukubikiResult.h */,
+				FA5570E01A6AE01E006EA18E /* ISceneFullCombo.h */,
+				FA5570E11A6AE01E006EA18E /* ISceneGame.h */,
+				FA5570E21A6AE01E006EA18E /* ISceneGottenPrize.h */,
+				FA5570E31A6AE01E006EA18E /* ISceneHowTo.h */,
+				FA5570E41A6AE01E006EA18E /* ISceneLinkage.h */,
+				FA5570E51A6AE01E006EA18E /* ISceneLoad.h */,
+				FA5570E61A6AE01E006EA18E /* ISceneLoginBonusDialog.h */,
+				FA5570E71A6AE01E006EA18E /* ISceneLogo.h */,
+				FA5570E81A6AE01E006EA18E /* ISceneManager.h */,
+				FA5570E91A6AE01E006EA18E /* ISceneManagerLinkage.h */,
+				FA5570EA1A6AE01E006EA18E /* ISceneManagerLinkageAlertViewDelegate.h */,
+				FA5570EB1A6AE01E006EA18E /* ISceneManagerTaikoController.h */,
+				FA5570EC1A6AE01E006EA18E /* ISceneManagerVDrums.h */,
+				FA5570ED1A6AE01E006EA18E /* ISceneMenu.h */,
+				FA5570EE1A6AE01E006EA18E /* ISceneNameEntry.h */,
+				FA5570EF1A6AE01E006EA18E /* ISceneNamePlate.h */,
+				FA5570F01A6AE01E006EA18E /* ISceneOptionButton.h */,
+				FA5570F11A6AE01E006EA18E /* ISceneOptionSelectDialog.h */,
+				FA5570F21A6AE01E006EA18E /* ISceneOtanoshimiDialog.h */,
+				FA5570F31A6AE01E006EA18E /* IScenePlayBonusDialog.h */,
+				FA5570F41A6AE01E006EA18E /* IScenePrizeList.h */,
+				FA5570F51A6AE01E006EA18E /* ISceneRanking.h */,
+				FA5570F61A6AE01E006EA18E /* ISceneResult.h */,
+				FA5570F71A6AE01E006EA18E /* ISceneScoreDialog.h */,
+				FA5570F81A6AE01E006EA18E /* ISceneScrollView.h */,
+				FA5570F91A6AE01E006EA18E /* ISceneSettings.h */,
+				FA5570FA1A6AE01E006EA18E /* ISceneSongSelect.h */,
+				FA5570FB1A6AE01E006EA18E /* ISceneSortSelectDialog.h */,
+				FA5570FC1A6AE01E006EA18E /* ISceneStartBonusDialog.h */,
+				FA5570FD1A6AE01E006EA18E /* ISceneStore.h */,
+				FA5570FE1A6AE01E006EA18E /* ISceneTaikoController.h */,
+				FA5570FF1A6AE01E006EA18E /* ISceneTitle.h */,
+				FA5571001A6AE01E006EA18E /* ISceneUltra.h */,
+				FA5571011A6AE01E006EA18E /* ISceneVDrumsDialog.h */,
+				FA5571021A6AE01E006EA18E /* ISceneVDrumsSettings.h */,
+				FA5571031A6AE01E006EA18E /* ISceneVSGame.h */,
+				FA5571041A6AE01E006EA18E /* ISceneVSResult.h */,
+				FA5571051A6AE01E006EA18E /* ISceneVSSettings.h */,
+				FA5571061A6AE01E006EA18E /* ISongInfo.h */,
+				FA5571071A6AE01E006EA18E /* IStorePackage.h */,
+				FA5571081A6AE01E006EA18E /* IStoreSong.h */,
+				FA5571091A6AE01E006EA18E /* LicenseViewController.h */,
+				FA55710A1A6AE01E006EA18E /* LinkageProduct.h */,
+				FA55710B1A6AE01E006EA18E /* LumenManager.h */,
+				FA55710C1A6AE01E006EA18E /* MidiInput.h */,
+				FA55710D1A6AE01E006EA18E /* MidiInputDelegate-Protocol.h */,
+				FA55710E1A6AE01E006EA18E /* MidiInputSourceInfo.h */,
+				FA55710F1A6AE01E006EA18E /* PlayerUserData.h */,
+				FA5571101A6AE01E006EA18E /* RankingBonusInfo.h */,
+				FA5571111A6AE01E006EA18E /* ResultPointsAndTransitions.h */,
+				FA5571121A6AE01E006EA18E /* SceneDialogDelegate-Protocol.h */,
+				FA5571131A6AE01E006EA18E /* SongCoursePlate.h */,
+				FA5571141A6AE01E006EA18E /* TaikoAction.h */,
+				FA5571151A6AE01E006EA18E /* TaikoAlertView.h */,
+				FA5571161A6AE01E006EA18E /* TaikoAudioPlayer.h */,
+				FA5571171A6AE01E006EA18E /* TaikoButton.h */,
+				FA5571181A6AE01E006EA18E /* TaikoButtonDelegate-Protocol.h */,
+				FA5571191A6AE01E006EA18E /* TaikoCache.h */,
+				FA55711A1A6AE01E006EA18E /* TaikoCacheEntry-Protocol.h */,
+				FA55711B1A6AE01E006EA18E /* TaikoCacheOperation.h */,
+				FA55711C1A6AE01E006EA18E /* TaikoCoverView.h */,
+				FA55711D1A6AE01E006EA18E /* TaikoDataInputStream.h */,
+				FA55711E1A6AE01E006EA18E /* TaikoEquipment.h */,
+				FA55711F1A6AE01E006EA18E /* TaikoEquipmentCostume.h */,
+				FA5571201A6AE01E006EA18E /* TaikoEquipmentManager.h */,
+				FA5571211A6AE01E006EA18E /* TaikoEquipmentTaiko.h */,
+				FA5571221A6AE01E006EA18E /* TaikoEquipmentTheme.h */,
+				FA5571231A6AE01E006EA18E /* TaikoEquipmentTone.h */,
+				FA5571241A6AE01E006EA18E /* TaikoFileInputStream.h */,
+				FA5571251A6AE01E006EA18E /* TaikoGroupAction.h */,
+				FA5571261A6AE01E006EA18E /* TaikoInputStream.h */,
+				FA5571271A6AE01E006EA18E /* TaikoKeychain.h */,
+				FA5571281A6AE01E006EA18E /* TaikoLabel.h */,
+				FA5571291A6AE01E006EA18E /* TaikoLoginBonusItem.h */,
+				FA55712A1A6AE01E006EA18E /* TaikoNumberLabel.h */,
+				FA55712B1A6AE01E006EA18E /* TaikoPackageInfo.h */,
+				FA55712C1A6AE01E006EA18E /* TaikoPrize.h */,
+				FA55712D1A6AE01E006EA18E /* TaikoPrizeImageInfo.h */,
+				FA55712E1A6AE01E006EA18E /* TaikoPrizeManager.h */,
+				FA55712F1A6AE01E006EA18E /* TaikoProgressIndicator.h */,
+				FA5571301A6AE01E006EA18E /* TaikoRenderer.h */,
+				FA5571311A6AE01E006EA18E /* TaikoRepeatAction.h */,
+				FA5571321A6AE01E006EA18E /* TaikoRestore.h */,
+				FA5571331A6AE01E006EA18E /* TaikoSceneNode.h */,
+				FA5571341A6AE01E006EA18E /* TaikoSECache.h */,
+				FA5571351A6AE01E006EA18E /* TaikoSECacheEntry.h */,
+				FA5571361A6AE01E006EA18E /* TaikoSequenceAction.h */,
+				FA5571371A6AE01E006EA18E /* TaikoTextureCache.h */,
+				FA5571381A6AE01E006EA18E /* TaikoTextureCacheEntry.h */,
+				FA5571391A6AE01E006EA18E /* TaikoUpdateChecker.h */,
+				FA55713A1A6AE01E006EA18E /* TaikoUpdateCheckerDelegate-Protocol.h */,
+				FA55713B1A6AE01E006EA18E /* TaikoUserDefaults.h */,
+				FA55713C1A6AE01E006EA18E /* TaikoViewController.h */,
+				FA55713D1A6AE01E006EA18E /* TaikoWindow.h */,
+				FA55713E1A6AE01E006EA18E /* TaikoWindowDelegate-Protocol.h */,
+				FA55713F1A6AE01E006EA18E /* TaikoWindowFadeInFadeOut.h */,
+				FA5571401A6AE01E006EA18E /* TaikoWindowOpenClose.h */,
+				FA5571411A6AE01E006EA18E /* TaikoWindowZoomInFadeOut.h */,
+			);
+			name = OtherTaikoHeaders;
+			path = TaikoHeaders;
+			sourceTree = "<group>";
+		};
+		FAA9EDD41A6ACF0A008DE36C = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDE41A6ACF0A008DE36C /* TaikoNoTatsujinPlus */,
+				FAA9EDE11A6ACF0A008DE36C /* Frameworks */,
+				FAA9EDE01A6ACF0A008DE36C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA9EDE01A6ACF0A008DE36C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDDF1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA9EDE11A6ACF0A008DE36C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C01295261AAF683A00348656 /* Security.framework */,
+				C01295201AAF66DF00348656 /* lib */,
+				C03F31361AAF65BC00621AD1 /* libcommonCrypto.dylib */,
+				FA5570C71A6AD59B006EA18E /* libsubstrate.dylib */,
+				FA5570C51A6AD4E0006EA18E /* UIKit.framework */,
+				FAA9EDE21A6ACF0A008DE36C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA9EDE41A6ACF0A008DE36C /* TaikoNoTatsujinPlus */ = {
+			isa = PBXGroup;
+			children = (
+				C06B94891AACCC8200CD6D37 /* Library */,
+				FA5570C91A6AE01E006EA18E /* OtherTaikoHeaders */,
+				FA0D3E541A6AD2D30082CA8E /* RelatedHeaders */,
+				FACD71591A6AE47600A59C80 /* Demo.txt */,
+				FACD71581A6AE47600A59C80 /* checksum.c */,
+				FA5570C31A6AD4C8006EA18E /* IO.h */,
+				C06B94A81AACCD2800CD6D37 /* DesHelper.h */,
+				C06B94A91AACCD2800CD6D37 /* DesHelper.m */,
+				C02DFA641AAF446500C8FB3F /* FileHelper.h */,
+				C02DFA651AAF446500C8FB3F /* FileHelper.m */,
+				C085CC4B1AB20A940012F5D1 /* TaikoController.h */,
+				C085CC4A1AB20A930012F5D1 /* TaikoController.m */,
+				C085CC4D1AB20A940012F5D1 /* ServerController.h */,
+				FA8ED03C1B5C0DB800FDF9FD /* main.m */,
+				C085CC4C1AB20A940012F5D1 /* ServerController.m */,
+				FAD9D9881B07DA1100A77E68 /* Obfuscating.h */,
+				FAA9EDEC1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.xm */,
+				FAA9EDED1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.mm */,
+				FADA75231AB57404006D0D17 /* ISongInfo.h */,
+				FADA75251AB5740E006D0D17 /* TaikoEquipment.h */,
+				FAA9EDE51A6ACF0A008DE36C /* Package */,
+				FAA9EDE91A6ACF0A008DE36C /* Supporting Files */,
+			);
+			path = TaikoNoTatsujinPlus;
+			sourceTree = "<group>";
+		};
+		FAA9EDE51A6ACF0A008DE36C /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDE61A6ACF0A008DE36C /* DEBIAN */,
+				FAA9EDEF1A6ACF0A008DE36C /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		FAA9EDE61A6ACF0A008DE36C /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDE71A6ACF0A008DE36C /* control.txt */,
+				FAA9EDE81A6ACF0A008DE36C /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		FAA9EDE91A6ACF0A008DE36C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDEA1A6ACF0A008DE36C /* PackageVersion.plist */,
+				FAA9EDEB1A6ACF0A008DE36C /* TaikoNoTatsujinPlus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAA9EDEF1A6ACF0A008DE36C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDF01A6ACF0A008DE36C /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		FAA9EDF01A6ACF0A008DE36C /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDF11A6ACF0A008DE36C /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		FAA9EDF11A6ACF0A008DE36C /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				FAA9EDF21A6ACF0A008DE36C /* TaikoNoTatsujinPlus.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FAA9EDDC1A6ACF0A008DE36C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02DFA6A1AAF51E600C8FB3F /* Md5.h in Headers */,
+				C06B94A21AACCCE200CD6D37 /* RNCryptorEngine.h in Headers */,
+				C06B94991AACCCE200CD6D37 /* Base64.h in Headers */,
+				C06B949F1AACCCE200CD6D37 /* RNCryptor.h in Headers */,
+				C06B94AE1AACCD2800CD6D37 /* DesHelper.h in Headers */,
+				FA5570C41A6AD4C8006EA18E /* IO.h in Headers */,
+				FA2B25981B4D2B4600B940DA /* ISceneMenu.h in Headers */,
+				C02DFA661AAF446500C8FB3F /* FileHelper.h in Headers */,
+				C06B949E1AACCCE200CD6D37 /* RNCryptor-Prefix.pch in Headers */,
+				C085CC511AB20A940012F5D1 /* ServerController.h in Headers */,
+				FADA75261AB5740E006D0D17 /* TaikoEquipment.h in Headers */,
+				C06B94A41AACCCE200CD6D37 /* RNDecryptor.h in Headers */,
+				C06B94A11AACCCE200CD6D37 /* RNCryptor+Private.h in Headers */,
+				C02DFA6E1AAF547E00C8FB3F /* RNEncryptor.h in Headers */,
+				FA2B25971B4D2B4600B940DA /* ISceneManager.h in Headers */,
+				C06B94A61AACCCE200CD6D37 /* STHTTPRequest.h in Headers */,
+				FADA75241AB57404006D0D17 /* ISongInfo.h in Headers */,
+				C06B949B1AACCCE200CD6D37 /* GTMBase64.h in Headers */,
+				C06B949D1AACCCE200CD6D37 /* GTMDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FAA9EDDE1A6ACF0A008DE36C /* TaikoNoTatsujinPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA9EDF51A6ACF0A008DE36C /* Build configuration list for PBXNativeTarget "TaikoNoTatsujinPlus" */;
+			buildPhases = (
+				FAA9EDD91A6ACF0A008DE36C /* ShellScript */,
+				FAA9EDDA1A6ACF0A008DE36C /* Sources */,
+				FAA9EDDB1A6ACF0A008DE36C /* Frameworks */,
+				FAA9EDDC1A6ACF0A008DE36C /* Headers */,
+				FAA9EDDD1A6ACF0A008DE36C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaikoNoTatsujinPlus;
+			productName = TaikoNoTatsujinPlus;
+			productReference = FAA9EDDF1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA9EDD51A6ACF0A008DE36C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				TargetAttributes = {
+					FAA9EDDE1A6ACF0A008DE36C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = FAA9EDD81A6ACF0A008DE36C /* Build configuration list for PBXProject "TaikoNoTatsujinPlus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FAA9EDD41A6ACF0A008DE36C;
+			productRefGroup = FAA9EDE01A6ACF0A008DE36C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA9EDDE1A6ACF0A008DE36C /* TaikoNoTatsujinPlus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAA9EDD91A6ACF0A008DE36C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		FAA9EDDD1A6ACF0A008DE36C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA9EDDA1A6ACF0A008DE36C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C085CC501AB20A940012F5D1 /* ServerController.m in Sources */,
+				C02DFA6F1AAF547E00C8FB3F /* RNEncryptor.m in Sources */,
+				C06B94A51AACCCE200CD6D37 /* RNDecryptor.m in Sources */,
+				C02DFA6B1AAF51E600C8FB3F /* Md5.m in Sources */,
+				C085CC4E1AB20A940012F5D1 /* TaikoController.m in Sources */,
+				C06B94A71AACCCE200CD6D37 /* STHTTPRequest.m in Sources */,
+				C06B949A1AACCCE200CD6D37 /* Base64.m in Sources */,
+				FAA9EDEE1A6ACF0A008DE36C /* TaikoNoTatsujinPlus.mm in Sources */,
+				C06B94A31AACCCE200CD6D37 /* RNCryptorEngine.m in Sources */,
+				C06B94AF1AACCD2800CD6D37 /* DesHelper.m in Sources */,
+				C06B949C1AACCCE200CD6D37 /* GTMBase64.m in Sources */,
+				C06B94A01AACCCE200CD6D37 /* RNCryptor.m in Sources */,
+				FA8ED03D1B5C0DB800FDF9FD /* main.m in Sources */,
+				C02DFA671AAF446500C8FB3F /* FileHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FAA9EDF31A6ACF0A008DE36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj *Headers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		FAA9EDF41A6ACF0A008DE36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj *Headers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		FAA9EDF61A6ACF0A008DE36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaikoNoTatsujinPlus/TaikoNoTatsujinPlus-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = "";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
+				LLVM_LTO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-Wl,-segalign,4000";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = all;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		FAA9EDF71A6ACF0A008DE36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaikoNoTatsujinPlus/TaikoNoTatsujinPlus-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = "";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
+				LLVM_LTO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-Wl,-segalign,4000";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = all;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA9EDD81A6ACF0A008DE36C /* Build configuration list for PBXProject "TaikoNoTatsujinPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA9EDF31A6ACF0A008DE36C /* Debug */,
+				FAA9EDF41A6ACF0A008DE36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA9EDF51A6ACF0A008DE36C /* Build configuration list for PBXNativeTarget "TaikoNoTatsujinPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA9EDF61A6ACF0A008DE36C /* Debug */,
+				FAA9EDF71A6ACF0A008DE36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA9EDD51A6ACF0A008DE36C /* Project object */;
+}

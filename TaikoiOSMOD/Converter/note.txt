@@ -1,0 +1,24 @@
+p-type=6 Costume “ResultCommon”  “ResultSucceeded”
+
+ptype=4 taiko “Taiko”
+ptype=5 Themes   “Menu” “Settings” 不包含其他
+ptype =2   Tones 特征串"SongSelect"
+
+
+
+
+tja是转sht，然后用dateasy打包了
+那个就shteasy 旧谱 新谱
+shteasy 街机谱 dat谱
+打包的话先填好config.yaml，然后dateasy -b 素材目录 dat目录
+shteasy目录格式｛
+ska_e.sht
+ska_ex.sht
+ska_h.sht
+ska_m.sht
+ska_n.sht
+ska.ipk
+ska.m4a
+
+
+｝

@@ -1,0 +1,8 @@
+size, checksum, priority
+ex:
+	<array>
+		<string>flower.dat</string>
+		<integer>3223792</integer>
+		<integer>153993082</integer>
+		<integer>30016</integer>
+	</array>

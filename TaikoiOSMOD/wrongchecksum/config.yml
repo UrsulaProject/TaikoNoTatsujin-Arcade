@@ -1,0 +1,18 @@
+iPhone2x_Ranking:
+- - file: 2-0-0.png
+    padding_height: 81
+    padding_width: 736
+    padding_x: 0
+    padding_y: 20
+iPhone2x_SongSelect:
+- - file: 0-0-0.png
+    padding_height: 320
+    padding_width: 64
+    padding_x: 0
+    padding_y: 0
+iPhone2x_Title:
+- - file: 1-0-0.png
+    padding_height: 52
+    padding_width: 350
+    padding_x: 9
+    padding_y: 6
